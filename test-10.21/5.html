@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="输入验证码" id="p1">
+    <span>IabE</span>
+    <button id="btn">确定</button>
+    <h1 id="h5"></h1>
+    <script>
+       var p1 = document.getElementById('p1');
+       var btn = document.getElementById('btn');
+       var h5 = document.getElementById('h5');
+       btn.onclick = function(){
+        var v = p1.value;
+        console.log(v.toLowerCase());
+        if(v=='iabe'){
+            h5.innerHTML = '正确'
+        }
+       }
+    </script>
+</body>
+</html>

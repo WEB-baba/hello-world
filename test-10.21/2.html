@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="h2"></h2>
+    <script>
+      var h2 = document.getElementById('h2');
+      var a = '87w';
+      var b = a.substr(0,2);
+      console.log(b);
+      var z = b.padEnd(6,'0');
+      h2.innerHTML = z;
+    </script>
+</body>
+</html>

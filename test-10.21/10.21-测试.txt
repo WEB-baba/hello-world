@@ -1,0 +1,111 @@
+1.将两个字符利用字符串对象的方法变成一个字符,显示在页面id为h1的元素中
+答:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="h1"></div>
+    <script>
+        var h1 = document.getElementById('h1');
+        var a = 'djfk';
+        var b = 'dkjj';
+        var b = a.concat(b);
+        h1.innerHTML = (b);
+    </script>
+</body>
+</html>
+
+2.一个富豪想存87万,给理财顾问写了87w,请自动生成存储870000的方法,显示在页面id为h2的元素中
+答:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="h2"></h2>
+    <script>
+      var h2 = document.getElementById('h2');
+      var a = '87w';
+      var b = a.substr(0,2);
+      console.log(b);
+      var z = b.padEnd(6,'0');
+      h2.innerHTML = z;
+    </script>
+</body>
+</html>
+
+3.一个数字79387.348的工程款,保留两位小数存入,显示在页面id为h3的元素中
+答:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+     <h3 id="h3"></h3>
+    <script>
+      var h3 = document.getElementById('h3');
+      var a = 79387.348;
+      var b = a.toFixed(2);
+      console.log(b);
+      h3.innerHTML = b;
+    </script>
+</body>
+</html>
+
+
+
+4.一张图片是一个相对路径img/head/,icon/1.jpg,我只需要拿到它的文件夹目录后显示在页面id为h4的元素中
+答:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+        <h4 id="h4"></h4>
+        <script>
+          var h4 = document.getElementById('h4');
+          var str = 'img/head/,icon/1.jpg';
+          var nstr = str.substring(0,13);
+          h4.innerHTML = nstr;
+        </script>
+</body>
+</html>
+
+5.用户输入验证码,无论大小写输入都会正确的方法,显示在页面id为h1的元素中,显示在页面id为h4的元素中
+答:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="输入验证码" id="p1">
+    <span>IabE</span>
+    <button id="btn">确定</button>
+    <h1 id="h5"></h1>
+    <script>
+       var p1 = document.getElementById('p1');
+       var btn = document.getElementById('btn');
+       var h5 = document.getElementById('h5');
+       btn.onclick = function(){
+        var v = p1.value;
+        console.log(v.toLowerCase());
+        if(v=='iabe'){
+            h5.innerHTML = '正确'
+        }
+       }
+    </script>
+</body>
+</html>
